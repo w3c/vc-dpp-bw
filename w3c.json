@@ -1,5 +1,5 @@
  {
-    "group":      ["wg/vc", "tf/dbw"]
+    "group":      ["wg/vc", "tf/vc-dbw"]
 ,   "contacts":   ["iherman"]
 ,   "repo-type":  "rec-track"
 }
