@@ -66,21 +66,98 @@
   <body>
     <section id="abstract">
       <p>
-        This specification does neat stuff.
+        This document describes use cases and requirements for a Verifiable Credentials-based
+        Business Wallet infrastructure supporting cross-border business identity,
+        know-your-business-partner compliance, supply chain credential portability, professional
+        qualification verification, transport access, and electronic invoicing. Nine concrete
+        scenarios are examined, spanning individuals acting as company representatives, structured
+        KYB/KYS/KYC onboarding, cross-border tax representation, micro-credential portability,
+        verified transport access, and tamper-evident invoicing. From these scenarios,
+        twenty-two normalized requirements are derived, grouped into five categories: core trust
+        primitives, identity, authorization and delegation, interoperability and portability,
+        and cryptography and integrity. A requirements traceability matrix maps each requirement
+        to the use cases that depend on it.
       </p>
     </section>
     <section id="sotd">
       <p>
-        This is an unofficial proposal.
+        This document is a work-in-progress contribution to the W3C Verifiable Credentials
+        Working Group. It has not been formally reviewed or endorsed by the Working Group.
+        Comments and contributions are welcome via the
+        <a href="https://github.com/w3c/vc-dpp-bw">GitHub repository</a>.
       </p>
     </section>
 
     <section id="introduction">
       <h2>Introduction</h2>
       <p>
-        See <a href="https://github.com/w3c/respec/wiki/User's-Guide">ReSpec's user guide</a>
-        for how to get started!
+        The Business Wallet is a digital infrastructure initiative enabling
+        organisations to hold, present, and verify machine-readable credentials issued by
+        authoritative sources — business registers, tax authorities, certification bodies,
+        accreditation agencies, and regulatory authorities — across states and
+        third-country partners.
+      </p>
+      <p>
+        This document collects use cases that motivate the technical requirements for such
+        an infrastructure. Each use case describes a concrete problem faced by real actors —
+        company representatives, compliance managers, procurement officers, students, truck
+        drivers, and accounts payable managers — and shows how verifiable credentials issued
+        and verified through a business wallet architecture can address that problem.
+      </p>
+      <p>
+        The use cases cover cross-border business identity and representation, structured
+        compliance due diligence (KYB, KYS, KYC), foreign tax representation, professional
+        qualification portability, transport gate access, and electronic invoicing integrity.
+        Together, they motivate a layered set of requirements:
+      </p>
+      <ul>
+        <li>
+          <strong>Core trust primitives</strong> that apply universally: cryptographic proof
+          of control, real-time credential status, verifiable audit trails, and freedom from
+          administrative denial.
+        </li>
+        <li>
+          <strong>Identity requirements</strong> covering legal person identity, decentralized
+          issuance, inter-jurisdictional recognition, employee and contact-person binding, and
+          natural-person-to-legal-person mandate binding.
+        </li>
+        <li>
+          <strong>Authorization and delegation requirements</strong> covering mutual
+          authentication, credential delegation with scoped authority, user-controlled selective
+          disclosure, policy-driven attestation requests, and revocation without intermediary.
+        </li>
+        <li>
+          <strong>Interoperability and portability requirements</strong> ensuring credentials
+          are portable across platforms, survive organisational and service-provider changes,
+          support machine-to-machine exchange, and are usable across jurisdictions without
+          re-issuance.
+        </li>
+        <li>
+          <strong>Cryptographic and integrity requirements</strong> covering qualified
+          electronic signatures and qualified electronic seals as defined under eIDAS 2.0.
+        </li>
+      </ul>
+      <p>
+        Each use case is structured with actors, preconditions, trigger, narrative, postconditions,
+        and an explicit requirements list. The <a href="#requirements">Requirements</a> section
+        provides formal definitions for all twenty-two requirements. The
+        <a href="#requirements-traceability-matrix">Traceability Matrix</a> cross-references
+        requirements and use cases.
       </p>
     </section>
-  </body>
+    <section id="use-cases">
+    <h2>Use Cases</h2>
+    <section data-include="../scenarios/trusted-data-sharing-in-a-data-space.md" data-include-format="markdown"></section>
+    <section data-include="../scenarios/company-representative-acting-on-behalf-of-a-company.md" data-include-format="markdown"></section>
+    <section data-include="../scenarios/know-your-business-partner-kyc-kys-kyb-due-diligence.md" data-include-format="markdown"></section>
+    <section data-include="../scenarios/know-your-supplier-kys-supplier-onboarding.md" data-include-format="markdown"></section>
+    <section data-include="../scenarios/know-your-customer-kyc-corporate-onboarding.md" data-include-format="markdown"></section>
+    <section data-include="../scenarios/foreign-tax-declaration.md" data-include-format="markdown"></section>
+    <section data-include="../scenarios/issuing-micro-credentials-and-verified-skills.md" data-include-format="markdown"></section>
+    <section data-include="../scenarios/authentication-and-access-for-transport.md" data-include-format="markdown"></section>
+    <section data-include="../scenarios/einvoicing.md" data-include-format="markdown"></section>
+  </section>
+  <section data-include="requirements.md" data-include-format="markdown"></section>
+  <section data-include="traceability.md" data-include-format="markdown"></section>
+</body>
 </html>
