@@ -66,21 +66,125 @@
   <body>
     <section id="abstract">
       <p>
-        This specification does neat stuff.
+        This document describes use cases and requirements for a Verifiable Credentials-based
+        Business Wallet infrastructure supporting cross-border business identity,
+        know-your-business-partner compliance, supply chain credential portability, professional
+        qualification verification, transport access, electronic invoicing, AI service governance,
+        autonomous systems, content authenticity, and post-quantum cryptography. Sixteen concrete
+        scenarios are examined, spanning individuals acting as company representatives, structured
+        KYB/KYS/KYC onboarding, cross-border tax representation, micro-credential portability,
+        verified transport access, tamper-evident invoicing, trusted AI agents in B2B commerce,
+        autonomous driving and robotics, C2PA content provenance, battery passports, EV charging,
+        energy grid flexibility, and PQC-resilient data sharing corridors. From these scenarios,
+        normalized requirements are derived, grouped into six categories: core trust
+        primitives, identity, authorization and delegation, interoperability and portability,
+        cryptography and integrity, and AI governance. Twenty-five vocabulary requirements are
+        identified for standardized data models spanning organization identity, AI governance,
+        products and supply chains, energy markets, transport, content authenticity, and
+        cryptography. A requirements traceability matrix maps each requirement to the use cases
+        that depend on it.
       </p>
     </section>
     <section id="sotd">
       <p>
-        This is an unofficial proposal.
+        This document is a work-in-progress contribution to the W3C Verifiable Credentials
+        Working Group. It has not been formally reviewed or endorsed by the Working Group.
+        Comments and contributions are welcome via the
+        <a href="https://github.com/w3c/vc-dpp-bw">GitHub repository</a>.
       </p>
     </section>
 
     <section id="introduction">
       <h2>Introduction</h2>
       <p>
-        See <a href="https://github.com/w3c/respec/wiki/User's-Guide">ReSpec's user guide</a>
-        for how to get started!
+        The Business Wallet is a digital infrastructure initiative enabling
+        organisations to hold, present, and verify machine-readable credentials issued by
+        authoritative sources — business registers, tax authorities, certification bodies,
+        accreditation agencies, and regulatory authorities — across states and
+        third-country partners.
+      </p>
+      <p>
+        This document collects use cases that motivate the technical requirements for such
+        an infrastructure. Each use case describes a concrete problem faced by real actors —
+        company representatives, compliance managers, procurement officers, students, truck
+        drivers, accounts payable managers, treasurers, fleet operators, production managers,
+        customs officers, and energy grid operators — and shows how verifiable credentials issued
+        and verified through a business wallet architecture can address that problem.
+      </p>
+      <p>
+        The use cases cover cross-border business identity and representation, structured
+        compliance due diligence (KYB, KYS, KYC), foreign tax representation, professional
+        qualification portability, transport gate access, electronic invoicing integrity,
+        AI-assisted B2B commerce and treasury, autonomous driving and robotics, C2PA content
+        authenticity, automotive supply chains with battery passports, EV charging fleet management,
+        AI-driven energy grid operations, and post-quantum cryptography for cross-border data sharing.
+        Together, they motivate a layered set of requirements:
+      </p>
+      <ul>
+        <li>
+          <strong>Core trust primitives</strong> that apply universally: cryptographic proof
+          of control, real-time credential status, verifiable audit trails, and freedom from
+          administrative denial.
+        </li>
+        <li>
+          <strong>Identity requirements</strong> covering legal person identity, decentralized
+          issuance, inter-jurisdictional recognition, employee and contact-person binding, and
+          natural-person-to-legal-person mandate binding.
+        </li>
+        <li>
+          <strong>Authorization and delegation requirements</strong> covering mutual
+          authentication, credential delegation with scoped authority, user-controlled selective
+          disclosure, policy-driven attestation requests, and revocation without intermediary.
+        </li>
+        <li>
+          <strong>Interoperability and portability requirements</strong> ensuring credentials
+          are portable across platforms, survive organisational and service-provider changes,
+          support machine-to-machine exchange, and are usable across jurisdictions without
+          re-issuance.
+        </li>
+        <li>
+          <strong>Cryptographic and integrity requirements</strong> covering qualified
+          electronic signatures, qualified electronic seals as defined under eIDAS 2.0, and
+          post-quantum cryptography for long-term protection.
+        </li>
+        <li>
+          <strong>AI governance requirements</strong> covering AI Service Passports, agent
+          authorization, model validation, human oversight, and runtime monitoring for AI agents
+          acting on behalf of organizations or operating autonomous systems.
+        </li>
+      </ul>
+      <p>
+        Each use case is structured with actors, preconditions, trigger, narrative, postconditions,
+        and an explicit requirements list. The <a href="#requirements">Requirements</a> section
+        provides formal definitions for all requirements. The
+        <a href="#vocabulary-requirements">Vocabulary Requirements</a> section identifies the
+        standardized vocabularies and data models needed to support interoperability across these
+        use cases. The <a href="#requirements-traceability-matrix">Traceability Matrix</a> cross-references
+        requirements and use cases.
       </p>
     </section>
-  </body>
+    <section id="use-cases">
+    <h2>Use Cases</h2>
+    <section data-include="../scenarios/trusted-data-sharing-in-a-data-space.md" data-include-format="markdown"></section>
+    <section data-include="../scenarios/company-representative-acting-on-behalf-of-a-company.md" data-include-format="markdown"></section>
+    <section data-include="../scenarios/know-your-business-partner-kyc-kys-kyb-due-diligence.md" data-include-format="markdown"></section>
+    <section data-include="../scenarios/know-your-supplier-kys-supplier-onboarding.md" data-include-format="markdown"></section>
+    <section data-include="../scenarios/know-your-customer-kyc-corporate-onboarding.md" data-include-format="markdown"></section>
+    <section data-include="../scenarios/foreign-tax-declaration.md" data-include-format="markdown"></section>
+    <section data-include="../scenarios/issuing-micro-credentials-and-verified-skills.md" data-include-format="markdown"></section>
+    <section data-include="../scenarios/authentication-and-access-for-transport.md" data-include-format="markdown"></section>
+    <section data-include="../scenarios/einvoicing.md" data-include-format="markdown"></section>
+    <section data-include="../scenarios/c2pa-and-cawg-for-trusted-fashion-imagery.md" data-include-format="markdown"></section>
+    <section data-include="../scenarios/autonomous-driving-and-trusted-software-release.md" data-include-format="markdown"></section>
+    <section data-include="../scenarios/trusted-ai-for-agentic-b2b-commerce-and-treasury.md" data-include-format="markdown"></section>
+    <section data-include="../scenarios/trusted-physical-ai-for-robots-in-japanese-smart-manufacturing.md" data-include-format="markdown"></section>
+    <section data-include="../scenarios/pqc-resilient-us-german-digital-data-sharing-corridor.md" data-include-format="markdown"></section>
+    <section data-include="../scenarios/addon/automotive-supply-chain-and-battery-passport.md" data-include-format="markdown"></section>
+    <section data-include="../scenarios/addon/ev-charging-and-legal-persons.md" data-include-format="markdown"></section>
+    <section data-include="../scenarios/addon/trusted-ai-for-energy-grid-forecasting-and-automated-flexibility-activation.md" data-include-format="markdown"></section>
+  </section>
+  <section data-include="requirements.md" data-include-format="markdown"></section>
+  <section data-include="vocabulary-requirements.md" data-include-format="markdown"></section>
+  <section data-include="traceability.md" data-include-format="markdown"></section>
+</body>
 </html>
