@@ -324,3 +324,237 @@ foundation of the trust architecture.
 **Acceptance criteria:** A document sealed with a QeSeal from a business wallet is accepted by an EU authority or private verifier as evidence of organisational origin and integrity, without requiring a separate authentication step.
 
 **Used in:** Foreign tax declaration, e-Invoicing.
+
+---
+
+### AI Governance and Autonomous Systems
+
+#### REQ-023 AI Service Passport
+
+**Priority:** MUST
+
+**Description:** AI services acting on behalf of organisations or controlling autonomous systems MUST hold an AI Service Passport (AISP) credential that records the model version, training data classes, operational design domain, validation status, testing evidence, human oversight controls, incident history, and runtime monitoring configuration.
+
+**Rationale:** Organisations and users need to verify that AI agents and autonomous systems are validated, operating within approved parameters, and subject to appropriate human oversight before granting them authority to act.
+
+**Acceptance criteria:** A verifier can confirm the AI service identity, model version, validation status, approved operational domain, and human oversight requirements by checking the AISP credential and its status.
+
+**Used in:** C2PA and CAWG for trusted fashion imagery, Autonomous driving and trusted software release, Trusted AI for agentic B2B commerce and treasury, Trusted Physical AI for robots in Japanese smart manufacturing, Trusted AI for energy grid forecasting and automated flexibility activation.
+
+---
+
+#### REQ-024 Agent Power of Attorney
+
+**Priority:** MUST
+
+**Description:** Organisations MUST be able to issue scoped Agent Power of Attorney (Agent PoA) credentials to AI agents, specifying the actions the agent is authorised to perform, the validity period, applicable constraints (e.g., transaction limits, geographic scope, resource access), and conditions requiring human approval.
+
+**Rationale:** AI agents need machine-verifiable authorization to act on behalf of organizations. Without scoped Agent PoAs, counterparties cannot verify whether an AI agent has legitimate authority or is exceeding its mandate.
+
+**Acceptance criteria:** A verifier can confirm that an AI agent is authorized to perform a specific action on behalf of an organization by checking the Agent PoA credential, including scope, constraints, validity period, and approval requirements.
+
+**Used in:** Autonomous driving and trusted software release, Trusted AI for agentic B2B commerce and treasury, Trusted Physical AI for robots in Japanese smart manufacturing, Trusted AI for energy grid forecasting and automated flexibility activation.
+
+---
+
+#### REQ-025 Agent validation credential
+
+**Priority:** MUST
+
+**Description:** AI agents MUST hold validation credentials issued by authorized validation bodies attesting that the agent's software, model, safety controls, and operational procedures have been tested and validated according to applicable standards.
+
+**Rationale:** Validation credentials provide independent attestation that AI services meet safety, security, and performance requirements before they are trusted with autonomous actions.
+
+**Acceptance criteria:** A verifier can confirm that an AI agent has been validated by an authorized body and that the validation covers the agent's current software version and operational domain.
+
+**Used in:** Autonomous driving and trusted software release, Trusted AI for agentic B2B commerce and treasury, Trusted Physical AI for robots in Japanese smart manufacturing, Trusted AI for energy grid forecasting and automated flexibility activation.
+
+---
+
+#### REQ-026 Human oversight and control
+
+**Priority:** MUST
+
+**Description:** Credentials authorizing AI agents or autonomous systems MUST specify the required level of human oversight, including actions requiring human approval, monitoring requirements, override mechanisms, and fallback procedures.
+
+**Rationale:** High-risk AI operations require human oversight to prevent harm, ensure accountability, and provide intervention capability. The oversight requirements must be verifiable and enforceable.
+
+**Acceptance criteria:** A verifier can determine from the credentials whether human approval is required for a specific action, whether appropriate monitoring is active, and whether override mechanisms are in place.
+
+**Used in:** Autonomous driving and trusted software release, Trusted AI for agentic B2B commerce and treasury, Trusted Physical AI for robots in Japanese smart manufacturing, Trusted AI for energy grid forecasting and automated flexibility activation.
+
+---
+
+#### REQ-027 Model version control and runtime monitoring
+
+**Priority:** MUST
+
+**Description:** Every AI agent presentation MUST include the specific model version, software hash, and configuration in use. Real-time monitoring of AI service status MUST trigger automatic blocking of operations when a model version is flagged, suspended, or revoked.
+
+**Rationale:** AI models can have defects discovered after deployment. Model-specific revocation enables targeted response to safety or security issues without disrupting unaffected systems.
+
+**Acceptance criteria:** When an AI model version is flagged or revoked, all systems relying on that version are automatically identified and blocked from autonomous operation until a validated replacement is in place.
+
+**Used in:** C2PA and CAWG for trusted fashion imagery, Autonomous driving and trusted software release, Trusted AI for agentic B2B commerce and treasury, Trusted Physical AI for robots in Japanese smart manufacturing, Trusted AI for energy grid forecasting and automated flexibility activation.
+
+---
+
+### Product and Asset Identity
+
+#### REQ-028 Digital Product Passport
+
+**Priority:** MUST
+
+**Description:** Physical products, components, and assets MUST be capable of holding Digital Product Passport (DPP) credentials that verifiably link the product identity to its manufacturer, model, serial number, conformity status, lifecycle data, and supply chain provenance.
+
+**Rationale:** Supply chain trust, regulatory compliance, and lifecycle management require verifiable product identity and provenance that survives ownership and custody changes.
+
+**Acceptance criteria:** A verifier can confirm a product's identity, manufacturer, conformity status, and key lifecycle events by checking the DPP credential without requiring centralized database access.
+
+**Used in:** Autonomous driving and trusted software release, Trusted Physical AI for robots in Japanese smart manufacturing, Automotive supply chain and battery passport, EV charging and legal persons.
+
+---
+
+#### REQ-029 Vehicle, robot, and device identity
+
+**Priority:** MUST
+
+**Description:** Autonomous vehicles, robots, charging stations, and other non-human actors MUST hold identity credentials that verifiably bind their unique identifier (VIN, serial number, EVSE ID) to their technical specifications, operational capabilities, and relationship to their legal owner or operator.
+
+**Rationale:** Machine-to-machine interactions require verifiable identity of non-human actors to establish trust, enforce access controls, and maintain audit trails.
+
+**Acceptance criteria:** A verifier can confirm the identity and technical specifications of a vehicle, robot, or device and verify its relationship to the owning or operating legal entity.
+
+**Used in:** Autonomous driving and trusted software release, Trusted Physical AI for robots in Japanese smart manufacturing, Automotive supply chain and battery passport, EV charging and legal persons.
+
+---
+
+#### REQ-030 Manufacturing site identity
+
+**Priority:** SHOULD
+
+**Description:** Manufacturing sites, production facilities, and other locations where products are produced or processed SHOULD be identifiable through credentials that link the site to its operator, certifications, and authorized products.
+
+**Rationale:** Supply chain verification often requires confirming not just the manufacturer but the specific site where production occurred, particularly for regulated or high-risk products.
+
+**Acceptance criteria:** A verifier can confirm that a product was manufactured at a specific site operated by a verified legal entity with applicable certifications.
+
+**Used in:** Automotive supply chain and battery passport, Trusted Physical AI for robots in Japanese smart manufacturing.
+
+---
+
+### Content Authenticity and Provenance
+
+#### REQ-031 C2PA and CAWG integration
+
+**Priority:** SHOULD
+
+**Description:** Content credentials SHOULD support integration with C2PA manifests and CAWG identity assertions to establish verifiable provenance chains linking digital content to the legal persons, AI services, and validation bodies responsible for its creation and approval.
+
+**Rationale:** Digital content authenticity requires binding content to verified identities of creators, publishers, AI services, and validators in a tamper-evident manner.
+
+**Acceptance criteria:** A verifier can trace the complete provenance chain of digital content from creation through validation to publication, with each actor identified by verifiable credentials.
+
+**Used in:** C2PA and CAWG for trusted fashion imagery.
+
+---
+
+#### REQ-032 Tamper-evident content provenance
+
+**Priority:** MUST
+
+**Description:** Content provenance credentials MUST enable detection of any unauthorized modification to the content, metadata, or provenance chain after validation and approval.
+
+**Rationale:** Content authenticity is meaningless if modifications can occur undetected after validation. Tamper evidence is essential for trust in published content.
+
+**Acceptance criteria:** Any modification to content or its metadata after signing breaks the cryptographic binding and is automatically detected during verification.
+
+**Used in:** C2PA and CAWG for trusted fashion imagery.
+
+---
+
+### Post-Quantum Cryptography
+
+#### REQ-033 Post-quantum cryptographic primitives
+
+**Priority:** SHOULD
+
+**Description:** The credential ecosystem SHOULD support post-quantum cryptographic algorithms including ML-KEM for key establishment and ML-DSA or SLH-DSA for digital signatures to protect against harvest-now-decrypt-later attacks.
+
+**Rationale:** Sensitive data encrypted today with classical algorithms may be vulnerable when quantum-capable attacks become practical. Post-quantum protection is essential for long-term confidentiality.
+
+**Acceptance criteria:** Credentials and encrypted data can be protected using NIST-approved post-quantum algorithms, with protection beginning at initial encryption rather than requiring later migration.
+
+**Used in:** PQC-resilient U.S.-German digital data sharing corridor.
+
+---
+
+#### REQ-034 Hybrid signatures and encryption
+
+**Priority:** SHOULD
+
+**Description:** During the transition to post-quantum cryptography, the ecosystem SHOULD support hybrid cryptographic modes combining classical and post-quantum algorithms to provide both backward compatibility and quantum resistance.
+
+**Rationale:** Full migration to post-quantum algorithms requires time. Hybrid modes enable quantum protection while maintaining compatibility with existing systems.
+
+**Acceptance criteria:** A credential or encrypted message can be protected by both classical and post-quantum algorithms, with verification succeeding if either algorithm validates.
+
+**Used in:** PQC-resilient U.S.-German digital data sharing corridor.
+
+---
+
+#### REQ-035 Crypto-agility and algorithm metadata
+
+**Priority:** SHOULD
+
+**Description:** Credentials and encrypted data SHOULD include metadata recording the cryptographic algorithms, key sizes, and profiles used, enabling future migration to stronger algorithms and long-term verifiability of archived materials.
+
+**Rationale:** Cryptographic algorithms have limited lifespans. Algorithm metadata enables verification of whether archived materials remain secure and supports systematic migration to newer algorithms.
+
+**Acceptance criteria:** A verifier can determine which cryptographic algorithms were used for a credential or encrypted package and assess whether those algorithms remain acceptable under current security policies.
+
+**Used in:** PQC-resilient U.S.-German digital data sharing corridor.
+
+---
+
+### Market Role and Regulated Operations
+
+#### REQ-036 Market role credentials for regulated sectors
+
+**Priority:** MUST
+
+**Description:** Actors in regulated markets (energy, finance, telecommunications, transport) MUST be able to hold credentials attesting their authorized market roles issued by the relevant regulatory authority or designated registry.
+
+**Rationale:** Regulated operations require proof that each actor holds the legal authorization to perform specific market roles. Manual verification does not scale to automated cross-border operations.
+
+**Acceptance criteria:** A verifier can confirm that an actor holds a specific regulatory authorization (e.g., DSO, TSO, financial service provider) by checking credentials issued by the authoritative registry for that market.
+
+**Used in:** Trusted AI for agentic B2B commerce and treasury, EV charging and legal persons, Trusted AI for energy grid forecasting and automated flexibility activation.
+
+---
+
+#### REQ-037 Public authority identity credentials
+
+**Priority:** MUST
+
+**Description:** Public authorities acting in official capacity MUST hold verifiable identity credentials that establish their legal status, jurisdiction, and administrative authority separate from credentials for private actors.
+
+**Rationale:** Public authorities require distinct credential types that reflect their unique legal status, powers, and accountability frameworks.
+
+**Acceptance criteria:** A verifier can distinguish credentials issued by or to public authorities from those of private actors and can verify the authority's jurisdiction and powers.
+
+**Used in:** PQC-resilient U.S.-German digital data sharing corridor.
+
+---
+
+#### REQ-038 Policy-based access control
+
+**Priority:** MUST
+
+**Description:** Credential-based access decisions MUST support policy engines that evaluate multiple credential claims, scopes, constraints, and context factors to determine whether a specific action is authorized.
+
+**Rationale:** Complex authorization decisions require evaluating multiple factors beyond simple credential possession, including purpose limitations, scope constraints, transaction thresholds, and temporal validity.
+
+**Acceptance criteria:** A policy engine can evaluate whether a requested action satisfies all applicable authorization requirements by checking credentials, scopes, purpose limitations, and context.
+
+**Used in:** Trusted AI for agentic B2B commerce and treasury, Trusted Physical AI for robots in Japanese smart manufacturing, PQC-resilient U.S.-German digital data sharing corridor, Trusted AI for energy grid forecasting and automated flexibility activation.
