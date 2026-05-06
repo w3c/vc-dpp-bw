@@ -67,7 +67,7 @@ foundation of the trust architecture.
 
 ---
 
-### Identity
+## Identity
 
 #### REQ-005 Legal person identity
 
@@ -139,7 +139,7 @@ foundation of the trust architecture.
 
 ---
 
-### Authorization and Delegation
+## Authorization and Delegation
 
 #### REQ-010 Mutual authentication
 
@@ -211,7 +211,7 @@ foundation of the trust architecture.
 
 ---
 
-### Interoperability and Portability
+## Interoperability and Portability
 
 #### REQ-015 Credential portability across platforms
 
@@ -297,7 +297,7 @@ foundation of the trust architecture.
 
 ---
 
-### Cryptography and Integrity
+## Cryptography and Integrity
 
 #### REQ-021 Qualified electronic signature
 
@@ -327,7 +327,7 @@ foundation of the trust architecture.
 
 ---
 
-### AI Governance and Autonomous Systems
+## AI Governance and Autonomous Systems
 
 #### REQ-023 AI Service Passport
 
@@ -399,7 +399,7 @@ foundation of the trust architecture.
 
 ---
 
-### Product and Asset Identity
+## Product and Asset Identity
 
 #### REQ-028 Digital Product Passport
 
@@ -443,7 +443,7 @@ foundation of the trust architecture.
 
 ---
 
-### Content Authenticity and Provenance
+## Content Authenticity and Provenance
 
 #### REQ-031 C2PA and CAWG integration
 
@@ -473,7 +473,7 @@ foundation of the trust architecture.
 
 ---
 
-### Post-Quantum Cryptography
+## Post-Quantum Cryptography
 
 #### REQ-033 Post-quantum cryptographic primitives
 
@@ -517,7 +517,7 @@ foundation of the trust architecture.
 
 ---
 
-### Market Role and Regulated Operations
+## Market Role and Regulated Operations
 
 #### REQ-036 Market role credentials for regulated sectors
 
