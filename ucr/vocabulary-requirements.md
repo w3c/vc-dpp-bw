@@ -140,7 +140,7 @@ This section identifies the vocabulary and data model requirements that emerge f
 
 **Standards:** EU AI Act requirements, NIST AI Risk Management Framework, ISO/IEC 42001, IEEE 7010, ISO/IEC 23894
 
-**Used in:** C2PA and CAWG for trusted fashion imagery, Autonomous driving and trusted software release, Trusted AI for agentic B2B commerce and treasury, Trusted Physical AI for robots in Japanese smart manufacturing, Trusted AI for energy grid forecasting.
+**Used in:** Autonomous driving and trusted software release, Trusted AI for agentic B2B commerce and treasury, Trusted Physical AI for robots in Japanese smart manufacturing, Trusted AI for energy grid forecasting.
 
 ---
 
@@ -167,7 +167,7 @@ This section identifies the vocabulary and data model requirements that emerge f
 
 **Standards:** Model Cards (Google), System Cards (OpenAI), ML Model Metadata (Linux Foundation), SPDX for AI/ML
 
-**Used in:** C2PA and CAWG for trusted fashion imagery, Autonomous driving and trusted software release, Trusted AI for agentic B2B commerce and treasury, Trusted Physical AI for robots in Japanese smart manufacturing, Trusted AI for energy grid forecasting.
+**Used in:** Autonomous driving and trusted software release, Trusted AI for agentic B2B commerce and treasury, Trusted Physical AI for robots in Japanese smart manufacturing, Trusted AI for energy grid forecasting.
 
 ---
 
@@ -413,30 +413,6 @@ This section identifies the vocabulary and data model requirements that emerge f
 
 ### Content Authenticity Vocabularies
 
-#### VOC-017 C2PA Content Credentials
-
-**Description:** Vocabulary for content provenance manifests including creation, editing, and validation history.
-
-**Rationale:** Content authenticity requires binding metadata to digital assets in a tamper-evident format.
-
-**Required fields:**
-- Asset identifier
-- Content type (image, video, audio, document)
-- Creation timestamp
-- Creator identity (person, organization, AI service)
-- Editing history
-- AI generation flag
-- AI service used
-- Validation status
-- Signature chains
-- CAWG identity assertions
-
-**Standards:** C2PA Specification v2.4, CAWG Identity Assertion Framework
-
-**Used in:** C2PA and CAWG for trusted fashion imagery.
-
----
-
 #### VOC-018 Rights and Approvals
 
 **Description:** Vocabulary for intellectual property rights, usage permissions, brand authorization, and content approval.
@@ -456,7 +432,7 @@ This section identifies the vocabulary and data model requirements that emerge f
 
 **Standards:** IPTC Photo Metadata, PLUS (Picture Licensing Universal System), Creative Commons licenses
 
-**Used in:** C2PA and CAWG for trusted fashion imagery.
+**Used in:** Digital Copyright Passport.
 
 ---
 
