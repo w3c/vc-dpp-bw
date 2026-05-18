@@ -79,7 +79,7 @@ foundation of the trust architecture.
 
 **Acceptance criteria:** A verifier can resolve the credential issuer's identifier against an authoritative business register and confirm the credential's cryptographic signature without contacting the issuing organisation directly.
 
-**Used in:** Trusted data sharing, Company representative, Know your business partner, Know your supplier, Know your customer, Foreign tax declaration, e-Invoicing.
+**Used in:** Trusted data sharing, Company representative, Know your business partner, Know your supplier, Know your customer, Foreign tax declaration, e-Invoicing, Digital Copyright Passport.
 
 ---
 
@@ -93,7 +93,7 @@ foundation of the trust architecture.
 
 **Acceptance criteria:** A verifier can verify a credential from an issuer not previously registered with the verifier by resolving the issuer's decentralized identifier and confirming the cryptographic signature.
 
-**Used in:** Trusted data sharing, Company representative, Know your business partner, Know your supplier, Know your customer, Foreign tax declaration, Issuing micro-credentials, Authentication and access for transport, e-Invoicing.
+**Used in:** Trusted data sharing, Company representative, Know your business partner, Know your supplier, Know your customer, Foreign tax declaration, Issuing micro-credentials, Authentication and access for transport, e-Invoicing, Digital Copyright Passport.
 
 ---
 
@@ -107,7 +107,7 @@ foundation of the trust architecture.
 
 **Acceptance criteria:** A verifier in jurisdiction B verifies a credential issued by an authority in jurisdiction A by resolving the issuer's identifier against an EU or bilateral trust registry, without a certified translation or apostille.
 
-**Used in:** Trusted data sharing, Company representative, Know your business partner, Know your supplier, Know your customer, Foreign tax declaration, Issuing micro-credentials, Authentication and access for transport, e-Invoicing.
+**Used in:** Trusted data sharing, Company representative, Know your business partner, Know your supplier, Know your customer, Foreign tax declaration, Issuing micro-credentials, Authentication and access for transport, e-Invoicing, Digital Copyright Passport.
 
 ---
 
@@ -151,7 +151,7 @@ foundation of the trust architecture.
 
 **Acceptance criteria:** A credential holder can verify the relying party's identity before disclosing any credential claims. An interaction with an unverified relying party is rejected by the holder's wallet.
 
-**Used in:** Trusted data sharing, Company representative, Know your business partner, Know your supplier, Know your customer, Foreign tax declaration, Authentication and access for transport, e-Invoicing.
+**Used in:** Trusted data sharing, Company representative, Know your business partner, Know your supplier, Know your customer, Foreign tax declaration, Authentication and access for transport, e-Invoicing, Digital Copyright Passport.
 
 ---
 
@@ -179,7 +179,7 @@ foundation of the trust architecture.
 
 **Acceptance criteria:** A credential holder generates a presentation including specific claims while provably not disclosing others. The verifier receives only the disclosed claims and cannot infer values of undisclosed claims from the presentation.
 
-**Used in:** Trusted data sharing, Company representative, Know your business partner, Know your supplier, Know your customer, Issuing micro-credentials.
+**Used in:** Trusted data sharing, Company representative, Know your business partner, Know your supplier, Know your customer, Issuing micro-credentials, Digital Copyright Passport.
 
 ---
 
@@ -207,7 +207,7 @@ foundation of the trust architecture.
 
 **Acceptance criteria:** An issuer updates a credential's status endpoint directly. Any verifier querying that endpoint within one verification cycle receives the revoked status without requiring notification from any intermediary.
 
-**Used in:** Company representative acting on behalf of a company.
+**Used in:** Company representative acting on behalf of a company, Digital Copyright Passport.
 
 ---
 
@@ -223,7 +223,7 @@ foundation of the trust architecture.
 
 **Acceptance criteria:** A credential issued by system A is accepted by a verifier on system B with no prior bilateral arrangement beyond conformance to the shared credential format and trust registry.
 
-**Used in:** Trusted data sharing, Company representative, Know your business partner, Know your supplier, Issuing micro-credentials.
+**Used in:** Trusted data sharing, Company representative, Know your business partner, Know your supplier, Issuing micro-credentials, Digital Copyright Passport.
 
 ---
 
@@ -251,7 +251,7 @@ foundation of the trust architecture.
 
 **Acceptance criteria:** When a holder migrates from one service provider to another, existing credentials remain valid and presentable without re-issuance. Verifiers continue to accept the credentials using the same issuer identifiers.
 
-**Used in:** Know your business partner, Foreign tax declaration, e-Invoicing.
+**Used in:** Know your business partner, Foreign tax declaration, e-Invoicing, Digital Copyright Passport.
 
 ---
 
@@ -339,7 +339,7 @@ foundation of the trust architecture.
 
 **Acceptance criteria:** A verifier can confirm the AI service identity, model version, validation status, approved operational domain, and human oversight requirements by checking the AISP credential and its status.
 
-**Used in:** C2PA and CAWG for trusted fashion imagery, Autonomous driving and trusted software release, Trusted AI for agentic B2B commerce and treasury, Trusted Physical AI for robots in Japanese smart manufacturing, Trusted AI for energy grid forecasting and automated flexibility activation.
+**Used in:** Autonomous driving and trusted software release, Trusted AI for agentic B2B commerce and treasury, Trusted Physical AI for robots in Japanese smart manufacturing, Trusted AI for energy grid forecasting and automated flexibility activation.
 
 ---
 
@@ -395,7 +395,7 @@ foundation of the trust architecture.
 
 **Acceptance criteria:** When an AI model version is flagged or revoked, all systems relying on that version are automatically identified and blocked from autonomous operation until a validated replacement is in place.
 
-**Used in:** C2PA and CAWG for trusted fashion imagery, Autonomous driving and trusted software release, Trusted AI for agentic B2B commerce and treasury, Trusted Physical AI for robots in Japanese smart manufacturing, Trusted AI for energy grid forecasting and automated flexibility activation.
+**Used in:** Autonomous driving and trusted software release, Trusted AI for agentic B2B commerce and treasury, Trusted Physical AI for robots in Japanese smart manufacturing, Trusted AI for energy grid forecasting and automated flexibility activation.
 
 ---
 
@@ -445,20 +445,6 @@ foundation of the trust architecture.
 
 ## Content Authenticity and Provenance
 
-#### REQ-031 C2PA and CAWG integration
-
-**Priority:** SHOULD
-
-**Description:** Content credentials SHOULD support integration with C2PA manifests and CAWG identity assertions to establish verifiable provenance chains linking digital content to the legal persons, AI services, and validation bodies responsible for its creation and approval.
-
-**Rationale:** Digital content authenticity requires binding content to verified identities of creators, publishers, AI services, and validators in a tamper-evident manner.
-
-**Acceptance criteria:** A verifier can trace the complete provenance chain of digital content from creation through validation to publication, with each actor identified by verifiable credentials.
-
-**Used in:** C2PA and CAWG for trusted fashion imagery.
-
----
-
 #### REQ-032 Tamper-evident content provenance
 
 **Priority:** MUST
@@ -469,7 +455,7 @@ foundation of the trust architecture.
 
 **Acceptance criteria:** Any modification to content or its metadata after signing breaks the cryptographic binding and is automatically detected during verification.
 
-**Used in:** C2PA and CAWG for trusted fashion imagery.
+**Used in:** Digital Copyright Passport.
 
 ---
 
@@ -543,7 +529,7 @@ foundation of the trust architecture.
 
 **Acceptance criteria:** A verifier can distinguish credentials issued by or to public authorities from those of private actors and can verify the authority's jurisdiction and powers.
 
-**Used in:** PQC-resilient U.S.-German digital data sharing corridor.
+**Used in:** PQC-resilient U.S.-German digital data sharing corridor, Digital Copyright Passport.
 
 ---
 
@@ -558,3 +544,75 @@ foundation of the trust architecture.
 **Acceptance criteria:** A policy engine can evaluate whether a requested action satisfies all applicable authorization requirements by checking credentials, scopes, purpose limitations, and context.
 
 **Used in:** Trusted AI for agentic B2B commerce and treasury, Trusted Physical AI for robots in Japanese smart manufacturing, PQC-resilient U.S.-German digital data sharing corridor, Trusted AI for energy grid forecasting and automated flexibility activation.
+
+---
+
+## Intellectual Property and Rights Management
+
+#### REQ-039 Natural person creator identity
+
+**Priority:** MUST
+
+**Description:** A natural person acting as an IP creator or licensor MUST be able to hold and present a verifiable identity credential derived from a qualified personal identity (PID) document, enabling them to authenticate as themselves, sign IP transactions, and be verifiably bound to issued creative works without requiring a legal entity registration.
+
+**Rationale:** Solo creators are natural persons who require verified identity for IP registration and licensing but may not represent a legal entity. Their identity must be as strongly attested as a legal person's, anchored to a qualified personal identity credential and their wallet.
+
+**Acceptance criteria:** A verifier can confirm a natural person's verified identity as the creator of a work by resolving their credential against a qualified PID issuer, without requiring a legal entity registration. The credential is accepted by IP authorities and marketplaces as a sufficient basis for authorship attribution.
+
+**Used in:** Digital Copyright Passport.
+
+---
+
+#### REQ-040 Creator membership and IP registry credential
+
+**Priority:** MUST
+
+**Description:** IP creators MUST be able to obtain a verifiable membership credential from an authorised Creator Trust Domain that timestamps their onboarding, designates the authoritative registry for anchoring their IP transactions, and is machine-queryable to detect duplicate registration of the same work across competing registries.
+
+**Rationale:** Without a single authoritative registry per creator, the same work can be registered multiple times across competing systems, creating irresolvable ownership conflicts. A membership credential with an onboarding timestamp and designated registry provides a transparent single source of truth for licensees, IP authorities, and courts.
+
+**Acceptance criteria:** A verifier can confirm that a creator is registered in exactly one Creator Trust Domain for a given work, identify the authoritative registry for that creator's IP transactions, and detect duplicate registrations by comparing membership timestamps across registries.
+
+**Used in:** Digital Copyright Passport.
+
+---
+
+#### REQ-041 Content identification and verifiable authorship credential
+
+**Priority:** MUST
+
+**Description:** Digital creative works MUST be identifiable through a content-derived fingerprint that is unique to the specific work and enables content matching across formats and resolutions. The fingerprint MUST be bound to a verifiable authorship credential signed by the creator's wallet, recording the creator's DID, the content fingerprint, the creation timestamp, and the authorship assertion.
+
+**Rationale:** A content-derived identifier provides a format-agnostic, tamper-evident link between a verifiable credential and the specific creative work, enabling provenance verification without requiring modification to the content file itself. The binding makes unauthorized modification detectable: any alteration to the content produces a fingerprint that no longer matches the credential.
+
+**Acceptance criteria:** A verifier can confirm that a specific content item matches the fingerprint recorded in the authorship credential and that the credential was signed by the creator's wallet at the recorded timestamp. Any modification to the content after signing is detectable through a fingerprint mismatch.
+
+**Used in:** Digital Copyright Passport.
+
+---
+
+#### REQ-042 Digital Copyright Passport credential
+
+**Priority:** MUST
+
+**Description:** Digital creative works MUST be capable of holding a Digital Copyright Passport credential that combines a verifiable authorship credential with an immutable on-chain identifier anchored in a trust registry, and that is published in a machine-queryable IP catalogue. The DCP MUST record the work's origin, ownership, rights status, and licensing history in a single verifiable record that remains queryable even if the original issuing platform is offline.
+
+**Rationale:** Downstream parties need a single point of reference that combines authorship verification, licensing status, and rights provenance. A record fragmented across separate systems requires bilateral lookups and does not support real-time automated verification by platforms, authorities, or courts.
+
+**Acceptance criteria:** A verifier can determine the origin, owner, current rights status, and full licensing history of a work by querying the DCP without contacting the creator directly. The DCP remains verifiable even if the original issuing platform is offline or the issuer has changed service providers.
+
+**Used in:** Digital Copyright Passport.
+
+---
+
+#### REQ-043 Rights expression and machine-enforceable licence credential
+
+**Priority:** MUST
+
+**Description:** IP licensing transactions MUST be expressible as machine-readable verifiable credentials encoding rights terms that specify the licensor, licensee, licensed asset, permitted uses, geographic territory, exclusivity status, licensed volume, royalty obligations, validity period, and sublicensing permissions. These terms MUST be automatically evaluable at the point of downstream rights verification without human interpretation.
+
+**Rationale:** Machine-readable licence terms enable automated verification of rights without manual legal review at every point of use, supporting scalable enforcement across platforms, markets, and jurisdictions. Licence terms that cannot be machine-evaluated cannot be consistently enforced at the speed and scale required by digital content markets.
+
+**Acceptance criteria:** A verifier can automatically determine whether a specific use of a licensed work is permitted by evaluating the licence credential against the proposed use, territory, and volume without human interpretation of the terms. A sublicensing request that exceeds the granted permissions is rejected automatically before the transaction completes.
+
+**Used in:** Digital Copyright Passport.
