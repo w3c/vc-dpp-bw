@@ -8,4 +8,6 @@ The following documents are developed on this Repository (titles are provisional
 - [Vocabularies for digital product passports](./dpp/index.html)
 - [Vocabularies for business wallets](./bw/index.html)
 - [Vocabulary use cases and requirements](./ucr/index.html)
+- [DPP related usage document](./dpp-ucr/index.html)
+
 
