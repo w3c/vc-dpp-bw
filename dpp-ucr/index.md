@@ -7,15 +7,21 @@ This note aims to investigate why, in some cases, it might be useful to issue a 
 
 # Why are VCs useful for DPPs? 
 The following list provides a number of use cases where VCs provide additional capabilities with respect to HTTPS.  
+
+- **Authenticity of the DPP**. The electronic signature of the economic operator that signs the DPP makes it "authentec". That means, it is possible to identify the actor that issued the DPP;
+- **Non-Repudiation of the DPP-Issuer**. The economic operator that signed the DPP cannot deny having issued product information, also called non-repudiation.
+- **Detect modifications of a DPP**. The electronic signature makes it possible to determine if the DPP has been modified / tampered with after issuance. This is also called verifying the "integrity" of a DPP and can be detected if the validation of the electronic signature fails.
+- **Increase trust in the DPP data**. The fact that the authenticity, non-repudiation, and integrity of a DPP becomes verifiable its trustworthyness. 
 - **Identifying the issuer of the DPP**: In many trade and logistics supply-chains, the DPP data may be stored and used locally by different “holders”. Thus, the server hosting the DPP may provide no information on the actually issuer of the data.   
 - **DPP revocation**: As economic operator are liable for the accuracy of the DPP data, DPP revocation is a useful feature in case an error has been detected and a new DPP must be issued. Revocation can also be useful for products with “use until” constraints. 
-- **Proving data authenticity**: In a world where it is very easy to generate fake product data, an organisation making use of DPP data for their own commercial operations (e.g. a professional purchasing company) can limit their liability if they are able to provide proofs that they are indeed using authentic data. 
-- **Timestamps**:  The timestamp inherent to the VC issuing helps improving the DPP data quality and supports liabilities related to claims. 
+- **Proving data authenticity**: In a world where it is very easy to generate fake product data, an organisation making use of DPP data for their own commercial operations (e.g. a professional purchasing company) can limit their liability if they are able to provide proofs that they are indeed using authentic data.
+- **Timestamps**:  The timestamp inherent to the VC issuing helps improving the DPP data quality and supports liabilities related to claims.
 - **Integrity over time**: Differently from HTTPS which provides integrity during data transmission, the VC’s timestamps also supports DPP integrity, in the sense of absence of change, over time.  
 - **Privacy**: The default HTTPS request provides no privacy for a party retrieving DPP data, e.g. a consumer. If the DPP is “held” by a third party, e.g. a retail store, the DPP copy held by the third party can be accessed and authenticated by the consumer instead of the version held by the issuing economic operator. This protects the privacy of the consumer. For example, if the DPP is for a medication, access to the DPP can reveal information about the user’s medical condition. 
 
+# Focus of this working group
 <img width="1328" height="643" alt="image" src="https://github.com/user-attachments/assets/f533b438-e0ed-45d2-b9c5-1c873c86587e" />
-Description of the targeted use case
+Description of the targeted use case. Are we focusing on the DPP only or also on the linked data from upstream and downstream? TBD
 
 # Why is there an international DPP Task Force in W3C Verifiable Credentials Working Group (VCWG)?
 The following list of topics should be discussed:
