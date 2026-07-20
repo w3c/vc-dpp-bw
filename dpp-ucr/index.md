@@ -41,8 +41,12 @@ The following list of topics should be discussed:
     - Single-protocol “use cases”: Issuing an EU-compliant DPP ; Issuing an UNTP-compliant DPP ; Issuing an XYZ-compliant DPP
     - Multi-protocol “use cases”: Linking DPPs (possibly of different flavors) : a product with a DPP can have a component/material that has a DPP; Linking product-related claims using different protocols e.g. EU DPP containing a link to an UNTP claim. Linking product-related events using different DPP protocols ; Retrieving and combining data from DPPs from multiple standards. E.g. a Vehicle DPP references component DPPs that are built all over the world and according to different DPP standards/vocabularies. 
 
-# Preparing the future: Advanced topics around VC usage for DPP
-- Are Verifiable Presentations useful in DPP use cases? Yes : 
+# Preparing the future: Advanced topics around VCs for DPP
+- Are Verifiable Presentations useful in DPP use cases? Yes : A VP is ephemeral. It can transport several VCs packaged together, while retaining the signature of each plus the signature of the VP (i.e. the signature of the VC holder) so you know who assembled the package. Alternatively, the signature of each VC can be removed and then only the signature of the VP issuer remains. For example, in the education sector, VCs containing the grades of each individual course are collected into a VP of the diploma. 
+ - How to present linked VCs in a VP ?
+ - How can one know if the VC/DPP issuer is a valid issuer?
+ - Compound VCs/DPPs : Packaging VCs together
+
 
 # Is DPP standard “X” compatible with VCDM ?
 In this section, we must explain that there is not a single "DPP standard" but rather a multiplicity of DPP standards. 
