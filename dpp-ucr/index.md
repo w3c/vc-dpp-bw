@@ -5,6 +5,13 @@ Different questions arise when considering issuing the DPP itself as a VC. In th
 
 This note aims to investigate why, in some cases, it might be useful to issue a DPP as a VC, explain why a DPP task force has been created in the W3C VCWG and discuss compatibility of DPP standards with the VCDM VC format. 
 
+# Digital product passports in international value chains
+Digital product passports can be used to convey information about finished goods, components, intermediate products and materials. While sometimes they are given other names, e.g. "Material passports", "Circularity passport" etc., in this report, we assume that all of these are functionally equivalent. DPPs can therefore be defined at all stages of the supply-chain, from upstream raw material extraction to downstream Circular Economy materials recovery, as illustrated in the figure below:
+
+<img width="886" height="429" alt="image" src="https://github.com/user-attachments/assets/f533b438-e0ed-45d2-b9c5-1c873c86587e" />
+
+The use of VCs in the DPP context is closely related to the use of VCs for the transport of all types of machine-readable product-related claims: declarations of conformity, test reports by accredited laboratories and conformity assessment bodies, standards compliance certificates, purchase proofs, product life-cycle events, etc. By linking these digital documents from a product's DPP, data quality improves and greater trust can be achieved. 
+
 # Why are VCs useful for DPPs? 
 The following list provides a number of use cases where VCs provide additional capabilities with respect to HTTPS.  
 
@@ -21,10 +28,8 @@ The following list provides a number of use cases where VCs provide additional c
 - **Integrity over time**: Differently from HTTPS which provides integrity during data transmission, the VC’s timestamps also supports DPP integrity, in the sense of absence of change, over time.  
 - **Privacy**: The default HTTPS request provides no privacy for a party retrieving DPP data, e.g. a consumer. If the DPP is “held” by a third party, e.g. a retail store, the DPP copy held by the third party can be accessed and authenticated by the consumer instead of the version held by the issuing economic operator. This protects the privacy of the consumer. For example, if the DPP is for a medication, access to the DPP can reveal information about the user’s medical condition. 
 
-# Focus of this working group
-Digital product passports can be used to convey information about finished goods, components, intermediate products and materials. While sometimes they are called "Material passports", in this report, we assume that all of these are fundamentally built from the same set of technologies. DPPs can therefore be defines   
-<img width="886" height="429" alt="image" src="https://github.com/user-attachments/assets/f533b438-e0ed-45d2-b9c5-1c873c86587e" />
-Description of the targeted use case. Are we focusing on the DPP only or also on the linked data from upstream and downstream? TBD
+# Why is Linked Data useful for DPPs? 
+Provides explicit context, semantic conflict reduction in data ingestion, combinability of data. Improves AI-based data exploitation. 
 
 # Why is there an international DPP Task Force in W3C Verifiable Credentials Working Group (VCWG)?
 The following list of topics should be discussed:
@@ -36,7 +41,11 @@ The following list of topics should be discussed:
     - Single-protocol “use cases”: Issuing an EU-compliant DPP ; Issuing an UNTP-compliant DPP ; Issuing an XYZ-compliant DPP
     - Multi-protocol “use cases”: Linking DPPs (possibly of different flavors) : a product with a DPP can have a component/material that has a DPP; Linking product-related claims using different protocols e.g. EU DPP containing a link to an UNTP claim. Linking product-related events using different DPP protocols ; Retrieving and combining data from DPPs from multiple standards. E.g. a Vehicle DPP references component DPPs that are built all over the world and according to different DPP standards/vocabularies. 
 
+# Preparing the future: Advanced topics around VC usage for DPP
+- Are Verifiable Presentations useful in DPP use cases? Yes : 
+
 # Is DPP standard “X” compatible with VCDM ?
+In this section, we must explain that there is not a single "DPP standard" but rather a multiplicity of DPP standards. 
 - Applicability of VCDM model to DPPs (EU/others) 
 - question about credential subject and product identifier…
 - A guidance document for creating VCDM-based DPPs. 
@@ -44,4 +53,5 @@ The following list of topics should be discussed:
 - A DPP-playground like environment
 - An example of an EU-DPP implementation based on VCDM.
 
+# Glossary
 
