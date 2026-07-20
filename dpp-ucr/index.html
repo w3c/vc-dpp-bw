@@ -15,6 +15,7 @@
 
           noRecTrack: true,
 
+          format: "markdown",
           addSectionLinks: true,
 
           // if you wish the publication date to be other than today, set this...
@@ -75,13 +76,16 @@
   <body>
     <section id="abstract">
         <p>
-          Digital Product Passports (DPPs) are machine-readable and authenticated conveyers of product-related information. They are simultaneously being introduced in various industry sectors through voluntary initiatives and through regulatory initiatives, e.g. in the European Union. This document aims to provide guidance on the implementation of DPPs based on Verifiable Credentials (VCs). It's goal is to support the exploration of why VCs are useful for DPP usecases and the specific role of Verifiable Presentations in this context. The longer-term goal is to understand how the evolving work around VC standardisation can further support this use case for cross-border data sharing.    
+          Digital Product Passports (DPPs) are machine-readable and authenticated conveyers of product-related information. They are simultaneously being introduced in various industry sectors through voluntary initiatives and through regulatory initiatives, e.g. in the European Union. This document aims to provide guidance on the implementation of DPPs based on Verifiable Credentials (VCs). It's goal is to support the exploration of why VCs are useful for DPP usecases and the specific role of Verifiable Presentations in this context. The longer-term goal is to understand how the evolving work around VC standardisation can further support this use case for cross-border data sharing.
         </p>
       </section>
       <section id="sotd">
       </section>
 
-      <section data-include="index.md" data-include-format="markdown"></section>
+
+
+
+      <section data-include="index.md" data-include-format="markdown" data-include-replace="true"></section>
 
   </body>
 </html>
