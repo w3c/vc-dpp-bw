@@ -22,7 +22,8 @@ The following list provides a number of use cases where VCs provide additional c
 - **Privacy**: The default HTTPS request provides no privacy for a party retrieving DPP data, e.g. a consumer. If the DPP is “held” by a third party, e.g. a retail store, the DPP copy held by the third party can be accessed and authenticated by the consumer instead of the version held by the issuing economic operator. This protects the privacy of the consumer. For example, if the DPP is for a medication, access to the DPP can reveal information about the user’s medical condition. 
 
 # Focus of this working group
-<img width="1328" height="643" alt="image" src="https://github.com/user-attachments/assets/f533b438-e0ed-45d2-b9c5-1c873c86587e" />
+Digital product passports can be used to convey information about finished goods, components, intermediate products and materials. While sometimes they are called "Material passports", in this report, we assume that all of these are fundamentally built from the same set of technologies. DPPs can therefore be defines   
+<img width="886" height="429" alt="image" src="https://github.com/user-attachments/assets/f533b438-e0ed-45d2-b9c5-1c873c86587e" />
 Description of the targeted use case. Are we focusing on the DPP only or also on the linked data from upstream and downstream? TBD
 
 # Why is there an international DPP Task Force in W3C Verifiable Credentials Working Group (VCWG)?
