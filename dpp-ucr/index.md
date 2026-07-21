@@ -65,8 +65,51 @@ The following list of topics should be discussed:
 
 # Is DPP standard “X” compatible with VCDM ?
 In this section, we must explain that there is not a single "DPP standard" but rather a multiplicity of DPP standards. 
+
+## The product as credential subject
+
+A digital product passport attests facts **about a product** — its composition, origin, conformity status, repairability, environmental performance, and so on. In the [Verifiable Credentials Data Model (VCDM) 2.0](https://www.w3.org/TR/vc-data-model-2.0/), claims are always made about a **subject**. For a DPP expressed as a verifiable credential, the natural subject is therefore the **product** itself, not the issuing economic operator, the data holder, or any other party involved in the supply chain.
+
+Concretely, the `credentialSubject` property of a DPP VC carries the product-related claims, and `credentialSubject.id` identifies **which product** those claims describe. All DPP standards — whether EU Battery Regulation, ESPR, UNTP, or sector-specific frameworks — ultimately need a stable, globally interoperable way to identify the product that the passport describes. VCDM provides the mechanism; the choice of identifier determines interoperability across standards and value chains.
+
+## VCDM allows URLs as credential subject identifiers
+
+Section 4.4 ("Identifiers") of [VCDM 2.0](https://www.w3.org/TR/vc-data-model-2.0/#identifiers) defines an optional `id` property for objects within a verifiable credential, including the credential subject. When present, the value of `id` **must be a single URL**, which may be dereferenceable. The specification explicitly lists HTTP URLs alongside UUIDs and Decentralized Identifiers (DIDs) as valid examples:
+
+> Example `id` values include UUIDs (`urn:uuid:…`), HTTP URLs (`https://id.example/things#123`), and DIDs (`did:example:1234abcd`).
+
+Importantly, DIDs are **not required**. The specification states that "verifiable credentials do not depend on DIDs and DIDs do not depend on verifiable credentials." For products identified through supply-chain standards rather than through cryptographic key pairs, a resolvable HTTP(S) URL is a first-class, fully conformant choice for `credentialSubject.id`. The specification further recommends that, where the URL is dereferenceable, it should resolve to machine-readable information about the identified thing — a property that well-designed product identifier URIs can satisfy through linked-data resolvers.
+
+## GS1 Digital Link as credentialSubject.id for DPP VCs
+
+The [GS1 Digital Link](https://www.gs1.org/standards/gs1-digital-link) standard defines a Web URI syntax for GS1 identification keys — the same keys that appear in barcodes, RFID tags, and product catalogues worldwide. A GS1 Digital Link URI (DLURI) encodes Application Identifiers as path and query elements, making it both a valid Web address and a precise GS1 identifier. This dual nature makes DLURIs an excellent fit for `credentialSubject.id` in DPP verifiable credentials.
+
+### Identifying a product with a GTIN Digital Link URI
+
+The Global Trade Item Number (GTIN, Application Identifier `01`) identifies a trade item — a product or product class. Its canonical Digital Link form is:
+
+```
+https://id.gs1.org/01/{gtin}
+```
+
+For example, `https://id.gs1.org/01/09520123456788` identifies GTIN 95201234567888 and is informationally equivalent to the barcode element string `(01)09520123456788`. Key qualifiers can refine the identifier to match the granularity required by a given DPP:
+
+| Granularity | Qualifier (AI) | Example URI |
+|-------------|----------------|-------------|
+| Product class (trade item) | — | `https://id.gs1.org/01/09520123456788` |
+| Consumer product variant | CPV (`22`) | `https://id.gs1.org/01/09520123456788/22/2A` |
+| Batch / lot (LGTIN) | Batch/lot (`10`) | `https://id.gs1.org/01/09520123456788/10/ABC123` |
+| Serialized instance (SGTIN) | Serial (`21`) | `https://id.gs1.org/01/09520123456788/21/12345` |
+
+Using a GTIN-based DLURI as `credentialSubject.id` means that the same identifier appears on the product's barcode/QR code, in the manufacturer's product catalogue, in logistics systems, and in the DPP verifiable credential — enabling seamless linking of product-related claims across the entire value chain without identifier translation.
+
+The [GS1 Verifiable Credentials Data Model](https://ref.gs1.org/gs1/vc/data-model/1.0.1/) already mandates that the `credentialSubject.id` of a GS1 Data Credential must be a GS1 Digital Link URI, and uses GTIN DLURIs in its Product Data Credential profile. This establishes a concrete, standards-based pattern that DPP implementers can adopt directly.
+
+
+
+## Remaining topics
+
 - Applicability of VCDM model to DPPs (EU/others) 
-- question about credential subject and product identifier…
 - A guidance document for creating VCDM-based DPPs. 
 - A test-suite for DPPs based on VCDM ?
 - A DPP-playground like environment
