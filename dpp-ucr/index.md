@@ -14,9 +14,10 @@ The use of VCs in the DPP context is closely related to the use of VCs for the t
 In general, because the DPP contains data about a product, when an economic operator decides to issue a DPP as a VC, the credential subject of the VC is the globally unique product identifier. There are many globally recognized standards for globally unique product identifiers: ISO/IEC 15459, IEC 61406-x, DIDs, etc. <mark> And also many globally recognized standards for generating a web link associated to the globally unique product identifier. But which one is the credential subject ? </mark>
 
 There are many ways to share a DPP issued as a VC:
-- The organisation issuing the DPP remains the holder of the VC, i.e. the issuer is also the holder. The DPP is thereforme made available in the issuer's wallet.
+- The organisation issuing the DPP remains the holder of the VC, i.e. the issuer is also the holder. The DPP is therefore made available in the issuer's wallet.
 - A copy of the VC is made available by a third party, e.g. an online marketplace. The DPP is therefore made available through the online marketplace's wallet.
-- The VC is made available in the product's wallet. The product wallet concept is a convenient approach for the collection of all related VCs about a product.  <mark> @Susanne, please correct/elaborate </mark>
+- The VC is made available in the product's wallet. The product wallet concept is comparable to a digital twin of the product on the web. A product wallet is a convenient approach for the collection of all related VCs about a product, especially for downstream information, such as State-of-Health status, repair event or End-Of-Live handling information.
+- Finally a DPP VC can simply made available on a product web site, not using a wallet.
 
 We observe that, differently from the classic "identity" use case where holder binding between the credential subject and the holder's wallet is an important property, the need for holder binding is more complex in DPP use cases. Certain applications may not require any holder binding while others might require multiple holder bindings. Certain advanced applications where the product itself acts as an agent (i.e. a car requesting energy from an electric charging station) may require strong holder binding to ensure that the DPP provided is indeed authorized to make claims about the car.  <mark> @Ronald, please correct/elaborate </mark>
 
@@ -46,17 +47,22 @@ The following list provides a number of use cases where VCs provide additional c
 - VPs can be used for selective disclore of claims contained in a DPP. This is a useful feature for disclosing selected data sets to parties on a need-to-know basis. 
 
 # Why is Linked Data useful for DPPs? 
+Linked Data increases the data quality of digital product passports and is in some cases even mandatory to meet regulatory compliance. It 
 <mark> Elaboration needed. Thank you </mark>
-- Provides explicit context and semantic interoperability
-- Elimintates semantic conflicts in data ingestion
-- Offers combinability properties for data. 
-- Improves AI-based data exploitation. 
+- provides explicit context and semantic interoperability
+- allows checks for data completeness in the DPP. 
+- elimintates semantic conflicts in data ingestion
+- offers combinability properties for data. 
+- improves AI-based data exploitation.
+
+Example: As one of the first DPP implementation examples, the European Commission allows DPPs to be issued as W3C Verifiable Credentials. When registering a DPPs against the EU DPP registry, it is checked, if the DPP contains all data that is  defined in the EU DPP registry semantic repository, the DPP is considered complete.
 
 # Why is there an international DPP Task Force in W3C Verifiable Credentials Working Group (VCWG)?
 The following list of topics should be discussed:
 - Current lack of international meeting place to work on linked data + VC-based DPPs. 
 - Multiplicity of DPP vocabs and protocols (including standards), if linked data is used to enforce strong semantic interoperability for DPP.
-- Importance of DPP data fusion for DPP. 
+- Importance of DPP data fusion for DPP.
+- Clear guidance on how to map EU DPP data model, especially the issuer ID and productID to the VC data model and provide guidance to the EC and implementers.
 - Other VCWG Task forces working on closely related technology to DPP : VC Business Wallet Vocabularies, VC Recognized Entities, VC Barcodes and Data Integrity.  The VCWG may need to consider how to present linked VCs in a VP.
 - How can one know if the VC/DPP issuer is a valid issuer? This topic is related to the recognized entity work by the VCWG.
 - Definition of international DPP “Use cases”:
