@@ -89,7 +89,7 @@ The working group may revisit the use of Verifiable Presentations for DPPs if a 
 Linked Data increases the data quality of digital product passports and is in some cases even mandatory to meet regulatory compliance. It 
 <mark> Elaboration needed. Thank you </mark>
 - provides explicit context and semantic interoperability 
-- elimintates semantic conflicts in data ingestion
+- eliminates semantic conflicts in data ingestion
 - offers combinability properties for data. 
 - improves AI-based data exploitation.
 
