@@ -26,7 +26,7 @@ The following list provides a number of use cases where VCs provide additional c
 
 ## General benefits from electronic signatures
 
-- **Authenticity of the DPP**: The electronic signature of the economic operator that signs the DPP makes it "authentec". That means, it is possible to identify the actor that issued the DPP;
+- **Authenticity of the DPP**: The electronic signature of the economic operator that signs the DPP makes it "authentic". That means, it is possible to identify the actor that issued the DPP;
 - **Non-Repudiation of the DPP-Issuer**: The economic operator that signed the DPP cannot deny having issued product information, also called non-repudiation. (Should we add information about a trust anchor here?)
 - **Detect modifications of a DPP**: The electronic signature makes it possible to determine if the DPP has been modified / tampered with after issuance. This is also called verifying the "integrity" of a DPP and can be detected if the validation of the electronic signature fails.
 - **Increase trust in the DPP data**: The fact that the authenticity, non-repudiation, and integrity of a DPP becomes verifiable its trustworthyness.
