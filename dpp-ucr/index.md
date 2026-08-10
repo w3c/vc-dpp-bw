@@ -64,7 +64,7 @@ The following list provides a number of use cases where VCs provide additional c
 
 - **Confidence methods**  <mark>Phil, please explain. </mark>
 - **threat modeling** <mark>Phil, please explain. </mark>
-- **Forgery defense** <mark>Phil, please explain. </mark>
+- **Forgery defense**: While the signature mechanism of VCs let issuers secure new proofs with newer cryptographic signatures (e.g., post-quantum schemes), the forgery defense specification lets an issuer establish strong (eg, quantum resistant) authenticity for credentials that are signed with conventional quantum-vulnerable algorithms. That may be the case for credentials that cannot reasonably be re-issued (e.g., driving licenses) or where the significant size of some quantum-resistant signatures  becomes an obstacle.
 
 
 
