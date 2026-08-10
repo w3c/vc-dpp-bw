@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 440" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#555555"/>
+    </marker>
+    <marker id="arrow3Blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1a4b7a"/>
+    </marker>
+    <marker id="arrow3Orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c07d1f"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="440" fill="#ffffff"/>
+  <text x="480" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a4b7a">Layered holder binding for legal persons</text>
+
+  <!-- Issuer -->
+  <rect x="40" y="90" width="200" height="90" rx="10" fill="#eaf7ec" stroke="#2e7d43" stroke-width="1.5"/>
+  <text x="140" y="118" text-anchor="middle" font-size="13" font-weight="bold" fill="#2e7d43">Issuer</text>
+  <text x="140" y="138" text-anchor="middle" font-size="11" fill="#2e7d43">business registrar,</text>
+  <text x="140" y="154" text-anchor="middle" font-size="11" fill="#2e7d43">certification body, GLEIF QVI …</text>
+
+  <!-- issues VC -->
+  <path d="M 240 135 L 330 135" stroke="#555555" stroke-width="2" marker-end="url(#arrow3)"/>
+  <text x="285" y="120" text-anchor="middle" font-size="10" fill="#555555">issues VC</text>
+  <text x="272" y="196" text-anchor="middle" font-size="9.5" fill="#555555" font-style="italic">subject = legal person</text>
+  <text x="272" y="210" text-anchor="middle" font-size="9.5" fill="#555555" font-style="italic">(LEI, registry no., DID)</text>
+
+  <!-- Legal person layer -->
+  <rect x="332" y="70" width="290" height="150" rx="10" fill="#eef4fb" stroke="#1a4b7a" stroke-width="1.5"/>
+  <text x="477" y="95" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a4b7a">Layer 1 — Legal person</text>
+  <rect x="357" y="108" width="240" height="90" rx="8" fill="#1a4b7a"/>
+  <text x="477" y="130" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">Business Wallet</text>
+  <rect x="375" y="140" width="204" height="18" rx="4" fill="#ffffff"/>
+  <text x="477" y="153" text-anchor="middle" font-size="10" fill="#1a4b7a">VC: credentialSubject = Organisation X</text>
+  <rect x="375" y="163" width="204" height="18" rx="4" fill="#5b86ad"/>
+  <text x="477" y="176" text-anchor="middle" font-size="10" fill="#ffffff">organisational keys (HSM, rotation)</text>
+
+  <!-- mandate arrow down -->
+  <path d="M 477 220 L 477 268" stroke="#c07d1f" stroke-width="2" marker-end="url(#arrow3Orange)"/>
+  <text x="486" y="240" font-size="10" fill="#c07d1f">grants mandate VC — verifiable,</text>
+  <text x="486" y="254" font-size="10" fill="#c07d1f">time-bounded, revocable</text>
+
+  <!-- Natural person layer -->
+  <rect x="332" y="270" width="290" height="120" rx="10" fill="#fdf3e3" stroke="#c07d1f" stroke-width="1.5"/>
+  <text x="477" y="295" text-anchor="middle" font-size="13" font-weight="bold" fill="#8a6116">Layer 2 — Natural person / agent</text>
+  <circle cx="380" cy="330" r="14" fill="#ffffff" stroke="#8a6116"/>
+  <path d="M 366 362 Q 380 344 394 362" fill="#ffffff" stroke="#8a6116"/>
+  <text x="382" y="380" font-size="9.5" text-anchor="middle" fill="#8a6116">employee / agent</text>
+  <rect x="415" y="315" width="185" height="22" rx="4" fill="#ffffff" stroke="#c07d1f"/>
+  <text x="507" y="330" text-anchor="middle" font-size="10" fill="#7a4f11">mandate VC: scope + validity</text>
+  <rect x="415" y="343" width="185" height="22" rx="4" fill="#ffffff" stroke="#c07d1f" stroke-dasharray="3,3"/>
+  <text x="507" y="358" text-anchor="middle" font-size="10" fill="#a97b2f">or: machine agent under policy</text>
+
+  <!-- presents to verifier -->
+  <path d="M 622 330 L 712 330" stroke="#1a4b7a" stroke-width="2" marker-end="url(#arrow3Blue)"/>
+  <text x="664" y="316" text-anchor="middle" font-size="10" fill="#1a4b7a">presents VP:</text>
+  <text x="664" y="350" text-anchor="middle" font-size="9" fill="#1a4b7a" font-style="italic">org VC + mandate VC</text>
+
+  <!-- Verifier -->
+  <rect x="714" y="270" width="206" height="120" rx="10" fill="#f6ecf5" stroke="#7a3c78" stroke-width="1.5"/>
+  <text x="817" y="298" text-anchor="middle" font-size="13" font-weight="bold" fill="#7a3c78">Verifier</text>
+  <text x="817" y="320" text-anchor="middle" font-size="10.5" fill="#7a3c78">checks: 1. org VC is valid</text>
+  <text x="817" y="338" text-anchor="middle" font-size="10.5" fill="#7a3c78">2. mandate is in scope + unexpired</text>
+  <text x="817" y="356" text-anchor="middle" font-size="10.5" fill="#7a3c78">3. presenter controls mandate keys</text>
+  <text x="817" y="374" text-anchor="middle" font-size="10.5" fill="#7a3c78">4. nothing has been revoked</text>
+
+  <!-- Revocation note -->
+  <path d="M 622 130 Q 780 130 817 268" stroke="#7a3c78" stroke-width="1.5" fill="none" stroke-dasharray="5,4" marker-end="url(#arrow3)"/>
+  <text x="765" y="110" text-anchor="middle" font-size="10" fill="#7a3c78">status check (revocation)</text>
+  <text x="765" y="124" text-anchor="middle" font-size="10" fill="#7a3c78">e.g. signatory left the company</text>
+
+  <text x="480" y="425" text-anchor="middle" font-size="10" fill="#888888">The credential subject is the legal person, but every act of holding or presenting is performed by a natural person or machine agent whose authority must itself be verifiable.</text>
+</svg>
