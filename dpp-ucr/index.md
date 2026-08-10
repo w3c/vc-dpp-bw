@@ -109,7 +109,7 @@ JSON Schema is probably the most straightforward mechanism if the DPP is primari
 - Is a number within a defined range?
 - Are nested objects structured correctly?
 
-While JSON Schema is imple, widely implemented, easy to integrate with existing JSON-based DPP systems, and relatively easy for implementers to understand, JSON Schema only validates the JSON representation, rather than the underlying semantic model. It is less well suited to expressing relationships between resources or constraints that depend on the meaning of linked entities.
+While JSON Schema is simple, widely implemented, easy to integrate with existing JSON-based DPP systems, and relatively easy for implementers to understand, JSON Schema only validates the JSON representation, rather than the underlying semantic model. It is less well suited to expressing relationships between resources or constraints that depend on the meaning of linked entities.
 
 ## Using JSON-LD & SHACL
 
